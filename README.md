@@ -1,4 +1,4 @@
-# Disney+ 🚀
+# Disney Plus 🚀
 
 ## 🔴 Live Demo
 
@@ -6,7 +6,7 @@ Not live yet...
 
 ## Description
 
-Disney+ clone with React & Firebase
+Disney Plus Clone with React & Firebase
 
 ## Getting Started
 
@@ -15,6 +15,7 @@ Disney+ clone with React & Firebase
 - React
 - React DOM
 - React Router DOM
+- Styled Components
 
 ### Installing
 
