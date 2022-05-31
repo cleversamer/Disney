@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { auth, provider } from "../firebase";
 import {
   selectUserName,
@@ -12,7 +12,7 @@ import {
 
 const Header = () => {
   const dispatch = useDispatch();
-  const history = useHistory();
+  const navigate = useNavigate();
   const userName = useSelector(selectUserName);
   const userPhoto = useSelector(selectUserPhoto);
 
@@ -20,7 +20,7 @@ const Header = () => {
     auth.onAuthStateChanged(async (user) => {
       if (user) {
         setUser(user);
-        history.push("/home");
+        navigate("/home");
       }
     });
   }, [userName]);
@@ -40,7 +40,7 @@ const Header = () => {
         .signOut()
         .then(() => {
           dispatch(setSignOutState());
-          history.push("/");
+          navigate("/");
         })
         .catch((err) => alert(err.message));
     }

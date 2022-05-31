@@ -5,7 +5,6 @@ import { selectRecommend } from "../features/movie/movieSlice";
 
 const Recommends = (props) => {
   const movies = useSelector(selectRecommend);
-  console.log(movies, ":🛢️");
 
   return (
     <Container>

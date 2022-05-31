@@ -2,7 +2,7 @@
 
 ## 🔴 Live Demo
 
-Not live yet...
+[Click here...](https://samer-disney.firebaseapp.com)
 
 ## Description
 
@@ -15,11 +15,17 @@ Disney Plus Clone with React & Firebase
 - React
 - React DOM
 - React Router DOM
+- React Redux
+- ReduxJS Toolkit
+- Firebase
 - Styled Components
+- Slick Carousel
+- React Slick
 
 ### Installing
 
-- Write on the termianl `npm install`
+- Write on the termianl `npm install --force`
+  - Use `--force` to avoid errors.
 
 ### Executing Program
 

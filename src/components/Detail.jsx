@@ -12,15 +12,9 @@ const Detail = () => {
       .doc(id)
       .get()
       .then((doc) => {
-        if (doc.exists) {
-          setDetailData(doc.data());
-        } else {
-          console.log("no such document in firebase 🔥");
-        }
+        if (doc.exists) setDetailData(doc.data());
       })
-      .catch((error) => {
-        console.log("Error getting document:", error);
-      });
+      .catch(() => {});
   }, [id]);
 
   return (
