@@ -1,21 +1,32 @@
-import React from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
-import Home from "./pages/home";
-import Login from "./pages/login";
-import NotFound from "./pages/not-found";
-import "./css/app.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Login from "./components/Login";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import Detail from "./components/Detail";
+import "./App.css";
 
-const App = () => {
+function App() {
   return (
-    <div className="app">
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/not-found" element={<NotFound />} />
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<Navigate to="/not-found" replace />} />
-      </Routes>
+    <div className="App">
+      <Router>
+        <Header />
+
+        <Switch>
+          <Route exact path="/">
+            <Login />
+          </Route>
+
+          <Route path="/home">
+            <Home />
+          </Route>
+
+          <Route path="/detail/:id">
+            <Detail />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
-};
+}
 
 export default App;

@@ -1,23 +1,19 @@
 import styled from "styled-components";
 
-const Login = () => {
+const Login = (props) => {
   return (
     <Container>
       <Content>
         <CTA>
           <CTALogoOne src="/assets/cta-logo-one.svg" alt="" />
-
           <SignUp>GET ALL THERE</SignUp>
-
           <Description>
             Get Premier Access to Raya and the Last Dragon for an additional fee
             with a Disney+ subscription. As of 03/26/21, the price of Disney+
             and The Disney Bundle will increase by $1.
           </Description>
-
           <CTALogoTwo src="/assets/cta-logo-two.png" alt="" />
         </CTA>
-
         <BgImage />
       </Content>
     </Container>
@@ -75,7 +71,6 @@ const CTALogoOne = styled.img`
 `;
 
 const SignUp = styled.a`
-  cursor: pointer;
   font-weight: bold;
   color: #f9f9f9;
   background-color: #0063e5;
@@ -86,6 +81,7 @@ const SignUp = styled.a`
   padding: 16.5px 0;
   border: 1px solid transparent;
   border-radius: 4px;
+
   &:hover {
     background-color: #0483ee;
   }
